@@ -1,0 +1,39 @@
+﻿<Page x:Class="Project.AddEditAuto"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Project"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddEditAuto">
+
+    <Grid Background="White" Loaded="Grid_Loaded">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
+
+            <TextBlock FontSize="24" Text="Работа с авто" HorizontalAlignment="Center"  Margin="20"/>
+
+        <TextBlock Text="Модель" Width="200"/>
+            <TextBox Text="{Binding Model}" Width="200" Margin="2" x:Name="t1"></TextBox>
+
+        <TextBlock Text="Цвет авто" Width="200" />
+            <TextBox Text="{Binding Color}"  Width="200" Margin="2" x:Name="t2"></TextBox>
+
+        <TextBlock Text="Год выпуска" Width="200" />
+            <TextBox Text="{Binding Year}"  Width="200" Margin="2" x:Name="t3"></TextBox>
+
+        <TextBlock Text="Гос. номер" Width="200" />
+            <TextBox Text="{Binding StNumber}"   Width="200" Margin="2" x:Name="t4"></TextBox>
+
+        <TextBlock Text="Стоимость одного дня" Width="200" />
+            <TextBox Text="{Binding Dayprice}"  Width="200" Margin="2" x:Name="t5"/>
+
+            <Button Name="add" Content="Сохранить"  Click="BtnSave_Click" Width="100" Margin="10" />
+
+            <Button  Content="назад" Width="100" Margin="10"  Click="Button_Click">
+            </Button>
+
+        </StackPanel>
+    </Grid>
+</Page>
